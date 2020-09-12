@@ -21,7 +21,7 @@ fbConnection();
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = (props) => (authed === false
     ? (<Component {...props} />)
-    : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
+    : (<Redirect to={{ pathname: '/', state: { from: props.location } }} />));
   return <Route {...rest} render={(props) => routeChecker(props)} />;
 };
 
@@ -57,22 +57,21 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
         <>
-          {/* {
+          {
             authed
               ? <MyNavbar />
               : <Auth />
-          } */}
-          <MyNavbar />
+          }
           <div className="container">
             <Switch>
-              <PrivateRoute path="/home" component={Homepage} authed={authed} />
+              <PrivateRoute path="/" exact component={Homepage} authed={authed} />
               <PrivateRoute path="/log/:gameId" component={LogsPage} authed={authed} />
               <PrivateRoute path="/new-game" component={GameForm} authed={authed} />
               <PrivateRoute path="/edit-game/:gameId" component={GameForm} authed={authed} />
               <PrivateRoute path="/new-log/:gameId" component={LogForm} authed={authed} />
               <PrivateRoute path="/edit-log/:logId" component={LogForm} authed={authed} />
-              <PublicRoute path="/auth" component={Auth} authed={authed} />
-              {/* <Redirect from="*" to="/home" /> */}
+              <PublicRoute path="/landing" component={Auth} authed={authed} />
+              <Redirect from="*" to="/" />
             </Switch>
           </div>
         </>
