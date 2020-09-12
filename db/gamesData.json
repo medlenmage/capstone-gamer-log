@@ -1,0 +1,10 @@
+{
+  "game1": {
+    "gameName": "The Elder Scrolls Skyrim",
+    "gameGenre": "RPG",
+    "currentlyPlaying": "false",
+    "dateStarted": "3/13/20",
+    "gameImage": "imgUrl",
+    "uid": 12345
+  }
+}
