@@ -2,9 +2,49 @@
   "game1": {
     "gameName": "The Elder Scrolls Skyrim",
     "gameGenre": "RPG",
-    "currentlyPlaying": "false",
+    "currentlyPlaying": false,
     "dateStarted": "3/13/20",
-    "gameImage": "imgUrl",
-    "uid": 12345
+    "gameImage": "https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png",
+    "uid": "vbY6jYZlA4YCZ1RdoIX1I488deS2"
+  },
+  "game2": {
+    "gameName": "The Outer Worlds",
+    "gameGenre": "RPG",
+    "currentlyPlaying": true,
+    "dateStarted": "4/20/20",
+    "gameImage": "https://upload.wikimedia.org/wikipedia/en/e/e7/The_Outer_Worlds_cover_art.png",
+    "uid": "vbY6jYZlA4YCZ1RdoIX1I488deS2"
+  },
+  "game3": {
+    "gameName": "Spider-Man",
+    "gameGenre": "Action-Adventure",
+    "currentlyPlaying": false,
+    "dateStarted": "6/1/20",
+    "gameImage": "https://i.pinimg.com/originals/92/70/63/927063c06ace82e0b892acd2163c853d.jpg",
+    "uid": "vbY6jYZlA4YCZ1RdoIX1I488deS2"
+  },
+  "game4": {
+    "gameName": "The Witcher 3",
+    "gameGenre": "RPG",
+    "currentlyPlaying": false,
+    "dateStarted": "1/31/19",
+    "gameImage": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
+    "uid": "vbY6jYZlA4YCZ1RdoIX1I488deS2"
+  },
+  "game5": {
+    "gameName": "Kingdom Hearts 3",
+    "gameGenre": "RPG, Shooter",
+    "currentlyPlaying": false,
+    "dateStarted": "7/7/20",
+    "gameImage": "https://gamespot1.cbsistatic.com/uploads/original/1585/15855271/3440101-kh3_keyart_reveal_1200x1200.jpg",
+    "uid": "vbY6jYZlA4YCZ1RdoIX1I488deS2"
+  },
+  "game6": {
+    "gameName": "Shadowrun Returns",
+    "gameGenre": "RPG, T.B.S",
+    "currentlyPlaying": false ,
+    "dateStarted": "8/26/20",
+    "gameImage": "https://upload.wikimedia.org/wikipedia/en/1/15/The_Elder_Scrolls_V_Skyrim_cover.png",
+    "uid": "vbY6jYZlA4YCZ1RdoIX1I488deS2"
   }
 }
