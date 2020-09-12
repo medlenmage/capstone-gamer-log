@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import Auth from '../Auth/Auth';
+import { Link } from 'react-router-dom';
 
 class MyNavbar extends React.Component {
   static propTypes = {
@@ -15,7 +15,6 @@ class MyNavbar extends React.Component {
   }
 
   render() {
-    const { authed } = this.props;
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="h">Navbar</a>
@@ -25,10 +24,10 @@ class MyNavbar extends React.Component {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="h">Home <span className="sr-only">(current)</span></a>
+              <Link to='/home'>My Games</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="h">Features</a>
+              <Link to='/new-game'>New Game</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="h">Pricing</a>
