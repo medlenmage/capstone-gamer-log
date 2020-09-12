@@ -1,8 +1,44 @@
 {
   "log1": {
-    "screenshot": "img here",
+    "screenshot": "../screenshots/skyrim/skyrim-1.png",
     "dateOfLog": "3/13/20",
-    "description": "shot a adventure in the knee",
+    "description": "Talked to the jarl. I have to go fight a dragon. Guards always complaining about sweetrolls and arrows in knees",
     "gameId": "game1"
-  }
+  },
+    "log2": {
+      "screenshot": "../screenshots/",
+      "dateOfLog": "",
+      "description": "",
+      "gameId": "game"
+    },
+    "log": {
+      "screenshot": "",
+      "dateOfLog": "",
+      "description": "",
+      "gameId": "game"
+    },
+    "log": {
+      "screenshot": "",
+      "dateOfLog": "",
+      "description": "",
+      "gameId": "game"
+    },
+    "log": {
+      "screenshot": "",
+      "dateOfLog": "",
+      "description": "",
+      "gameId": "game"
+    },
+    "log": {
+      "screenshot": "",
+      "dateOfLog": "",
+      "description": "",
+      "gameId": "game"
+    },
+    "log": {
+      "screenshot": "",
+      "dateOfLog": "",
+      "description": "",
+      "gameId": "game"
+    }
 }
