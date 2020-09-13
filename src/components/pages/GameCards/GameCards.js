@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 import gameShape from '../../../helpers/propz/gameShape';
 
-class BuildCards extends React.Component {
+class GameCards extends React.Component {
   static propTypes = {
     games: gameShape.gameShape,
   }
@@ -10,8 +11,10 @@ class BuildCards extends React.Component {
   render() {
     const { games } = this.props;
 
+    const singleGame = `/log/${games.id}`;
+
     return (
-      <div className="card">
+      <div className="card ">
         <img className="card-img-top" src={games.gameImage} alt="game-cover" />
         <div className="card-body">
           <h5 className="card-title">{games.gameName}</h5>
@@ -22,11 +25,11 @@ class BuildCards extends React.Component {
               ? <p className="currently-playing">Currently playing: Yes</p>
               : <p className="currently-playing">Currently playing: No</p>
           }
-          <a href="h" className="btn btn-primary">Go somewhere</a>
+          <Link className="btn btn-primary" to={singleGame}>View Log</Link>
         </div>
       </div>
     );
   }
 }
 
-export default BuildCards;
+export default GameCards;

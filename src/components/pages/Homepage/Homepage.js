@@ -1,7 +1,7 @@
 import React from 'react';
 import gamesData from '../../../helpers/data/gamesData';
 import authData from '../../../helpers/data/authData';
-import BuildCards from '../../shared/BuildCards/BuildCards';
+import GameCards from '../GameCards/GameCards';
 
 class Homepage extends React.Component {
   state = {
@@ -17,14 +17,14 @@ class Homepage extends React.Component {
   render() {
     const { games } = this.state;
 
-    const gameCards = games.map((game) => <BuildCards key={game.id} games={game} />);
+    const gameCard = games.map((game) => <GameCards key={game.id} games={game} />);
 
     return (
       <div className="">
         <h3>Homepage</h3>
         <div className="mb-3">
           <div className="card-columns">
-            {gameCards}
+            {gameCard}
           </div>
         </div>
       </div>
