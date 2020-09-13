@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&family=Russo+One&family=VT323&display=swap');
+
+.fas {
+  color: $color1;
+  position: fixed;
+  top: 35%;
+  left: 43.5%;
+}
+
+.sign-in {
+  background-color: $color2;
+  color: $color1;
+  position: fixed;
+  top: 55%;
+  left: 45%;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid $color1;
+}
+
+.sign-in:hover {
+  background-color: $color2;
+  border: 1px solid $color3;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: $color3;
+}

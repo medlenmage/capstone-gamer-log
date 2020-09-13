@@ -1,4 +1,5 @@
 import React from 'react';
+import './auth.scss';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -12,7 +13,10 @@ class Auth extends React.Component {
   render() {
     return (
       <div className="Auth">
-        <button className="btn btn-primary" onClick={this.loginClickEvent}>Sign In</button>
+        <h2 className="welcome-header">Welcome!</h2>
+        <h2 className="journal-header">To The Gamer's Journal!</h2>
+        <i className="fas fa-gamepad fa-10x"></i>
+        <button className="btn btn-primary sign-in" onClick={this.loginClickEvent}>Sign In</button>
       </div>
     );
   }

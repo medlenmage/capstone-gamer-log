@@ -60,7 +60,7 @@ class App extends React.Component {
           {
             authed
               ? <MyNavbar />
-              : <Auth />
+              : ''
           }
           <div className="container">
             <Switch>
