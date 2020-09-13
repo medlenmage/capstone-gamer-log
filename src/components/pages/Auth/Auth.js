@@ -13,7 +13,9 @@ class Auth extends React.Component {
   render() {
     return (
       <div className="Auth">
-        <i class="fas fa-gamepad fa-10x"></i>
+        <h2 className="welcome-header">Welcome!</h2>
+        <h2 className="journal-header">To The Gamer's Journal!</h2>
+        <i className="fas fa-gamepad fa-10x"></i>
         <button className="btn btn-primary sign-in" onClick={this.loginClickEvent}>Sign In</button>
       </div>
     );

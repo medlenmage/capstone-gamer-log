@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&family=Russo+One&family=VT323&display=swap');
+@import '../../../styles/variables';
+
+nav {
+  background-color:transparent;
+}
+
+.nav-links {
+  color: #ADA9B7;
+  font-weight: 800;
+  font-family: 'Press Start 2P', cursive;
+  font-size: x-large;
+}
+
+.game-link {
+  margin-right: 25px;
+}
+
+.new-link {
+  margin-left: 25px;
+}
+
+.sign-out {
+  background-color: $color2;
+  color: $color1;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid $color1;
+}
+
+.app-name {
+  color: $color1 !important;
+  font-weight: 800;
+  font-family: 'Press Start 2P', cursive;
+  font-size: x-large;
+}
