@@ -8,10 +8,10 @@ class LogsPage extends React.Component {
   }
 
   componentDidMount() {
-    // const { gameId } = this.props.match.params;
+    const { gameId } = this.props.match.params;
 
-    logsData.getLogsByGameId(this.props.match.params)
-      .then((res) => this.setState({ logs: res.data }))
+    logsData.getLogsByGameId(gameId)
+      .then((logs) => this.setState({ logs }))
       .catch((err) => console.error('could not get logs', err));
   }
 
