@@ -4,7 +4,7 @@ import apiKeys from '../apiKeys.json';
 const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getGamesByUid = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/items.json?orderBy="uid"&equalTo="${uid}`)
+  axios.get(`${baseUrl}/games.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       const allGames = response.data;
       const myGames = [];
