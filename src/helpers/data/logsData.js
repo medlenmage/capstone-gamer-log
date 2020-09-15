@@ -19,4 +19,6 @@ const getLogsByGameId = (gameId) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getLogsByGameId };
+const deleteLog = (logId) => axios.delete(`${baseUrl}/logs/${logId}.json`);
+
+export default { getLogsByGameId, deleteLog };

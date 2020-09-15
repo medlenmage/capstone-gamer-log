@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import gameShape from '../../../helpers/propz/gameShape';
 
 class GameCards extends React.Component {
   static propTypes = {
     games: gameShape.gameShape,
+    deleteGame: PropTypes.func.isRequired,
+  }
+
+  deleteGameEvent = (e) => {
+    e.preventDefault();
+    const { deleteGame, games } = this.props;
+    deleteGame(games.id);
   }
 
   render() {
@@ -26,7 +33,8 @@ class GameCards extends React.Component {
               : <p className="currently-playing game">Currently playing: No</p>
           }
           <Link className="btn btn-primary single-game" to={singleGame}>View Log</Link>
-          <button className="btn btn-danger ml-3 delete"><i class="far fa-trash-alt"></i></button>
+          <button className="btn btn-danger ml-3 edit"><i className="far fa-edit"></i></button>
+          <button className="btn btn-danger ml-3 delete" onClick={this.deleteGameEvent}><i className="far fa-trash-alt"></i></button>
         </div>
       </div>
     );
