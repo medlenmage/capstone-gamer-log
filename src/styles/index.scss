@@ -1,7 +1,60 @@
 @import 'variables';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&family=Russo+One&family=VT323&display=swap');
 
 body {
   background-image: url("https://img.pngio.com/wallpaper-gamer-png-alex-gamer-free-wallpaper-backgrounds-hd-gaming-png-1920_1080.png");
+}
+
+.delete {
+  background-color: $color2;
+  border: 1px solid $color3;
+  color: $color1;
+  font-family: 'Russo One', sans-serif;
+}
+
+.delete:hover {
+  background-color: $color1;
+  border: 1px solid $color3;
+  color: $color2;
+  font-family: 'Russo One', sans-serif;
+}
+
+.single-game {
+  background-color: #4d6cfa;
+  color: $color1;
+  border: 1px solid $color2;
+  font-family: 'Russo One', sans-serif;
+}
+
+.single-game:hover {
+  background-color: $color2;
+  color: $color3;
+  border: 1px solid $color1;
+  font-family: 'Russo One', sans-serif;
+}
+
+.game {
+  font-family: 'Russo One', sans-serif;
+  color: $color1;
+}
+
+.log {
+  font-family: 'Russo One', sans-serif;
+  color: $color1;
+}
+
+.edit {
+  background-color: #4d6cfa;
+  color: $color1;
+  border: 1px solid $color2;
+  font-family: 'Russo One', sans-serif;
+}
+
+.edit:hover {
+  background-color: $color2;
+  color: $color3;
+  border: 1px solid $color1;
+  font-family: 'Russo One', sans-serif;
 }
