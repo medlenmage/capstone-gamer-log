@@ -14,18 +14,19 @@ class GameCards extends React.Component {
     const singleGame = `/log/${games.id}`;
 
     return (
-      <div className="card ">
+      <div className="card bg-transparent">
         <img className="card-img-top" src={games.gameImage} alt="game-cover" />
         <div className="card-body">
-          <h5 className="card-title">{games.gameName}</h5>
-          <h6 className="game-genre">{games.gameGenre}</h6>
-          <p>{games.dateStarted}</p>
+          <h5 className="card-title game">{games.gameName}</h5>
+          <h6 className="game-genre game">{games.gameGenre}</h6>
+          <p className="game">{games.dateStarted}</p>
           {
             games.currentlyPlaying === true
-              ? <p className="currently-playing">Currently playing: Yes</p>
-              : <p className="currently-playing">Currently playing: No</p>
+              ? <p className="currently-playing game">Currently playing: Yes</p>
+              : <p className="currently-playing game">Currently playing: No</p>
           }
-          <Link className="btn btn-primary" to={singleGame}>View Log</Link>
+          <Link className="btn btn-primary single-game" to={singleGame}>View Log</Link>
+          <button className="btn btn-danger ml-3 delete"><i class="far fa-trash-alt"></i></button>
         </div>
       </div>
     );

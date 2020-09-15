@@ -1,42 +1,42 @@
 {
   "log1": {
-    "screenshot": "../screenshots/skyrim/skyrim-1.png",
+    "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/skyrim/skyrim-1.png?raw=true",
     "dateOfLog": "3/13/20",
     "description": "Talked to the jarl. I have to go fight a dragon. Guards always complaining about sweetrolls and arrows in knees",
     "gameId": "game1"
   },
     "log2": {
-      "screenshot": "../screenshots/kh3/kh3-1.jpg",
+      "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/kh3/kh3-1.jpg?raw=true",
       "dateOfLog": "7/7/20",
       "description": "Saved rapunzel from her evil mom. Taking her back to her real parents ",
       "gameId": "game5"
     },
     "log3": {
-      "screenshot": "../screenshots/outer-worlds/outer-worlds-2.jpg",
+      "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/outer-worlds/outer-worlds-2.jpg?raw=true",
       "dateOfLog": "4/20/20",
       "description": "Just got the parts together to repair my ship. headed to the hope colony ship.",
       "gameId": "game2"
     },
     "log4": {
-      "screenshot": "../screenshots/outer-worlds/outer-worlds-1.jpg",
+      "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/outer-worlds/outer-worlds-1.jpg?raw=true",
       "dateOfLog": "4/21/20",
       "description": "Finished at the hope. Recruited felix he is annoying regret instantly. Headed to roseway gardens to look for some scent thing",
       "gameId": "game2"
     },
     "log5": {
-      "screenshot": "../screenshots/shadowrun-returns/shadowrun.png",
+      "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/shadowrun-returns/shadowrun.png?raw=true",
       "dateOfLog": "8/26/20",
       "description": "I'm a bad to the bone elf in a cyberpunk world. Friend died, me sad, me investigated crime scene now talking to a owner of a bar to follow leads",
       "gameId": "game6"
     },
     "log6": {
-      "screenshot": "../screenshots/spiderman/spiderman-1.png",
+      "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/spiderman/spiderman-1.jpg?raw=true",
       "dateOfLog": "6/1/20",
       "description": "Got new suit. got side tracked with all the side stuff. beat up kingpin though. Did tutorials of certain tasks in game and abilities",
       "gameId": "game3"
     },
     "log7": {
-      "screenshot": "../screenshots/witcher3/Novigrad.jpg",
+      "screenshot": "https://github.com/medlenmage/capstone-gamer-log/blob/master/screenshots/witcher3/Novigrad.jpg?raw=true",
       "dateOfLog": "1/31/19",
       "description": "Took a quest from a crazy king to go kill a blind crazy mage. Meet with some ole chaps to discuss a coup.",
       "gameId": "game4"

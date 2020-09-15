@@ -13,11 +13,13 @@ class LogCards extends React.Component {
     const { logs } = this.props;
 
     return (
-      <div className="card ">
+      <div className="card bg-transparent">
         <img className="card-img-top" src={logs.screenshot} alt="game-cover" />
         <div className="card-body">
-          <h6 className="game-genre">{logs.dateOfLog}</h6>
-          <p>{logs.description}</p>
+          <h6 className="game-genre log">{logs.dateOfLog}</h6>
+          <p className="log">{logs.description}</p>
+          <button className="btn btn-danger mr-3 edit"><i class="far fa-edit"></i></button>
+          <button className="btn btn-danger ml-3 delete"><i class="far fa-trash-alt"></i></button>
         </div>
       </div>
     );
