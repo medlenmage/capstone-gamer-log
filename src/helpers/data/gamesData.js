@@ -19,6 +19,18 @@ const getGamesByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getGameById = (gameId) => axios.get(`${baseUrl}/games/${gameId}.json`);
+
 const deleteGame = (gameId) => axios.delete(`${baseUrl}/games/${gameId}.json`);
 
-export default { getGamesByUid, deleteGame };
+const addGame = (newGame) => axios.post(`${baseUrl}/games.json`, newGame);
+
+const updateGame = (gameId, editedGame) => axios.put(`${baseUrl}/games/${gameId}.json`, editedGame);
+
+export default {
+  getGamesByUid,
+  deleteGame,
+  addGame,
+  updateGame,
+  getGameById,
+};
