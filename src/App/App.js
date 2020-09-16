@@ -11,10 +11,11 @@ import 'firebase/auth';
 import fbConnection from '../helpers/data/connections';
 import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/pages/MyNavbar/MyNavbar';
-import GameForm from '../components/pages/AddUpdateGame/AddUpdateGame';
+import GameForm from '../components/pages/AddGame/AddGame';
 import LogForm from '../components/pages/AddUpdateLog/AddUpdateLog';
 import LogsPage from '../components/pages/LogsPage/LogsPage';
 import Homepage from '../components/pages/Homepage/Homepage';
+import EditGame from '../components/pages/EditGame/EditGame';
 
 fbConnection();
 
@@ -67,7 +68,7 @@ class App extends React.Component {
               <PrivateRoute path="/" exact component={Homepage} authed={authed} />
               <PrivateRoute path="/log/:gameId" component={LogsPage} authed={authed} />
               <PrivateRoute path="/new-game" component={GameForm} authed={authed} />
-              <PrivateRoute path="/edit-game/:gameId" component={GameForm} authed={authed} />
+              <PrivateRoute path="/edit-game/:gameId" component={EditGame} authed={authed} />
               <PrivateRoute path="/new-log/:gameId" component={LogForm} authed={authed} />
               <PrivateRoute path="/edit-log/:logId" component={LogForm} authed={authed} />
               <PublicRoute path="/landing" component={Auth} authed={authed} />

@@ -19,6 +19,7 @@ class GameCards extends React.Component {
     const { games } = this.props;
 
     const singleGame = `/log/${games.id}`;
+    const editGame = `/edit-game/${games.id}`;
 
     return (
       <div className="card bg-transparent">
@@ -33,7 +34,7 @@ class GameCards extends React.Component {
               : <p className="currently-playing game">Currently playing: No</p>
           }
           <Link className="btn btn-primary single-game" to={singleGame}>View Log</Link>
-          <button className="btn btn-danger ml-3 edit"><i className="far fa-edit"></i></button>
+          <Link className="btn btn-danger ml-3 edit" to={editGame}><i className="far fa-edit"></i></Link>
           <button className="btn btn-danger ml-3 delete" onClick={this.deleteGameEvent}><i className="far fa-trash-alt"></i></button>
         </div>
       </div>
