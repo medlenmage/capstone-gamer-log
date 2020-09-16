@@ -19,6 +19,18 @@ const getLogsByGameId = (gameId) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getLogsById = (logId) => axios.get(`${baseUrl}/logs/${logId}.json`);
+
+const addNewLog = (newLog) => axios.post(`${baseUrl}/logs.json`, newLog);
+
+const editALog = (logId, editedLog) => axios.put(`${baseUrl}/logs/${logId}.json`, editedLog);
+
 const deleteLog = (logId) => axios.delete(`${baseUrl}/logs/${logId}.json`);
 
-export default { getLogsByGameId, deleteLog };
+export default {
+  getLogsByGameId,
+  deleteLog,
+  getLogsById,
+  addNewLog,
+  editALog,
+};
