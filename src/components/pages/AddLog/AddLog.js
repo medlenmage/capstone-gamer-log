@@ -53,7 +53,7 @@ class AddLog extends React.Component {
             <label htmlFor="screenshot">Game Screenshot</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control log-input"
             id="screenshot"
             placeholder="Add a Screenshot"
             value={screenshot}
@@ -64,7 +64,7 @@ class AddLog extends React.Component {
             <label htmlFor="dateOfLog">Date Played</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control log-input"
             id="dateOfLog"
             placeholder="Date Played"
             value={dateOfLog}
@@ -75,14 +75,14 @@ class AddLog extends React.Component {
             <label htmlFor="description">Describe Events</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control log-input"
             id="description"
             placeholder="Describe event"
             value={description}
             onChange={this.changeDescription}
             />
           </div>
-          <button className="btn btn-primary" onClick={this.addALog}>Submit</button>
+          <button className="btn btn-primary log-form-btn" onClick={this.addALog}>Submit</button>
         </form>
       </div>
     );

@@ -3,6 +3,7 @@ import gamesData from '../../../helpers/data/gamesData';
 import authData from '../../../helpers/data/authData';
 import GameCards from '../GameCards/GameCards';
 import smashData from '../../../helpers/data/smashData';
+import './HomePage.scss';
 
 class Homepage extends React.Component {
   state = {
@@ -34,7 +35,7 @@ class Homepage extends React.Component {
 
     return (
       <div className="">
-        <h3>Homepage</h3>
+        <h3 className="games-header">Game Room</h3>
         <div className="mb-3">
           <div className="card-columns">
             {gameCard}

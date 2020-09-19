@@ -1,6 +1,7 @@
 import React from 'react';
 import gamesData from '../../../helpers/data/gamesData';
 import authData from '../../../helpers/data/authData';
+import '../gameFormStyles/gameFormStyles.scss';
 
 class AddGame extends React.Component {
   state = {
@@ -75,64 +76,67 @@ class AddGame extends React.Component {
     } = this.state;
 
     return (
-      <div className="add-update">
-        <form className="col-6 offset-3">
-          <div className="form-group">
-            <label htmlFor="gameName">Game Name</label>
-            <input
-            type="text"
-            className="form-control"
-            id="gameName"
-            placeholder="Game Name Here"
-            value={gameName}
-            onChange={this.changeGameName}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="gameGenre">Game Genre</label>
-            <input
-            type="text"
-            className="form-control"
-            id="gameGenre"
-            placeholder="Game Genre Here"
-            value={gameGenre}
-            onChange={this.changeGameGenre}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="dateStarted">Date Started</label>
-            <input
-            type="text"
-            className="form-control"
-            id="dateStarted"
-            placeholder="Start Date Here"
-            value={dateStarted}
-            onChange={this.changeDate}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="gameImage">Cover Art</label>
-            <input
-            type="text"
-            className="form-control"
-            id="gameImage"
-            placeholder="Cover Art Here"
-            value={gameImage}
-            onChange={this.changeGameImage}
-            />
-          </div>
-            <div className="form-check">
+      <div className="formContainer">
+        <h4 className="watcha-playin">Whatcha Playin???</h4>
+        <div className="add-update">
+          <form className="col-6 offset-3">
+            <div className="form-group">
+              <label htmlFor="gameName" className="games-label">Game Name</label>
               <input
-              type="checkbox"
-              className="form-check-input"
-              id="currentlyPlaying"
-              checked={currentlyPlaying}
-              onChange={this.changeCurrentlyPlaying}
+              type="text"
+              className="form-control game-input"
+              id="gameName"
+              placeholder="Game Name Here"
+              value={gameName}
+              onChange={this.changeGameName}
               />
-              <label className="form-check-label" htmlFor="currentlyPlaying">Currently Playing</label>
             </div>
-          <button className="btn btn-primary" onClick={this.addAGame}>Submit</button>
-        </form>
+            <div className="form-group">
+              <label htmlFor="gameGenre" className="games-label">Game Genre</label>
+              <input
+              type="text"
+              className="form-control game-input"
+              id="gameGenre"
+              placeholder="Game Genre Here"
+              value={gameGenre}
+              onChange={this.changeGameGenre}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="dateStarted" className="games-label">Date Started</label>
+              <input
+              type="text"
+              className="form-control game-input"
+              id="dateStarted"
+              placeholder="Start Date Here"
+              value={dateStarted}
+              onChange={this.changeDate}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="gameImage" className="games-label">Cover Art</label>
+              <input
+              type="text"
+              className="form-control game-input"
+              id="gameImage"
+              placeholder="Cover Art Here"
+              value={gameImage}
+              onChange={this.changeGameImage}
+              />
+            </div>
+              <div className="form-check">
+                <input
+                type="checkbox"
+                className="form-check-input game-input"
+                id="currentlyPlaying"
+                checked={currentlyPlaying}
+                onChange={this.changeCurrentlyPlaying}
+                />
+                <label className="form-check-label games-label" htmlFor="currentlyPlaying">Currently Playing</label>
+              </div>
+            <button className="btn btn-primary game-form-btn" onClick={this.addAGame}>Submit</button>
+          </form>
+        </div>
       </div>
     );
   }

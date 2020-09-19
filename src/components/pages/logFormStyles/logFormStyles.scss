@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&family=Russo+One&family=VT323&display=swap');
+@import '../../../styles/variables';
+
+.watcha-did-you-do {
+  color: $color1;
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.log-input {
+  background-color: $color3;
+  color: $color2;
+  border: solid 1px $color1;
+}
+
+.log-input::placeholder {
+  color: $color2;
+}
+
+.log-input:focus {
+  background-color: $color1;
+  color: $color3;
+  border: solid 1px $color2;
+}
+
+.log-form-btn {
+  background-color: $color2;
+  color: $color1;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid $color1;
+}
+
+.log-form-btn:hover {
+  background-color: $color3;
+  color: $color1;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid $color2;
+}
+
+.logs-label {
+  font-family: 'Russo One', sans-serif;
+  color: $color1;
+}
+
+.form-check-input {
+  background-color: $color1 !important;
+  border: solid 1px $color1;
+}

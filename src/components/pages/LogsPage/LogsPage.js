@@ -42,7 +42,7 @@ class LogsPage extends React.Component {
     return (
       <div className="">
         <h3>Homepage</h3>
-        <Link className="btn btn-primary" to={addLog}></Link>
+        <Link className="btn btn-primary add-log" to={addLog}>New Log</Link>
         <div className="mb-3">
           <div className="card-columns">
             {logCard}
