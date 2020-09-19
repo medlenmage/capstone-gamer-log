@@ -33,8 +33,15 @@ class AddGame extends React.Component {
 
   changeGameImage = (e) => {
     e.preventDefault();
-    this.setState({ gameImage: e.target.value });
+    if (e.target.files[0]) {
+      this.setState({ gameImage: e.target.files[0] });
+    }
   }
+
+  // changeGameImage = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ gameImage: e.target.value });
+  // }
 
   changeCurrentlyPlaying = (e) => {
     this.setState({ currentlyPlaying: e.target.checked });
@@ -116,7 +123,7 @@ class AddGame extends React.Component {
             <div className="form-group">
               <label htmlFor="gameImage" className="games-label">Cover Art</label>
               <input
-              type="text"
+              type="file"
               className="form-control game-input"
               id="gameImage"
               placeholder="Cover Art Here"
