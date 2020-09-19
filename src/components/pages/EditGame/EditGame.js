@@ -1,5 +1,6 @@
 import React from 'react';
 import gamesData from '../../../helpers/data/gamesData';
+import '../gameFormStyles/gameFormStyles.scss';
 
 class EditGame extends React.Component {
   state = {
@@ -76,13 +77,13 @@ class EditGame extends React.Component {
     } = this.state.game;
 
     return (
-      <div className="EditGame">
+      <div className="add-update">
         <form className="col-6 offset-3">
           <div className="form-group">
-            <label htmlFor="gameName">Game Name</label>
+            <label htmlFor="gameName" className="games-label">Game Name</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control game-input"
             id="gameName"
             placeholder="Game Name Here"
             value={gameName}
@@ -90,10 +91,10 @@ class EditGame extends React.Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="gameGenre">Game Genre</label>
+            <label htmlFor="gameGenre" className="games-label">Game Genre</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control game-input"
             id="gameGenre"
             placeholder="Game Genre Here"
             value={gameGenre}
@@ -101,10 +102,10 @@ class EditGame extends React.Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="dateStarted">Date Started</label>
+            <label htmlFor="dateStarted" className="games-label">Date Started</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control game-input"
             id="dateStarted"
             placeholder="Start Date Here"
             value={dateStarted}
@@ -112,10 +113,10 @@ class EditGame extends React.Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="gameImage">Cover Art</label>
+            <label htmlFor="gameImage" className="games-label">Cover Art</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control game-input"
             id="gameImage"
             placeholder="Cover Art Here"
             value={gameImage}
@@ -125,14 +126,14 @@ class EditGame extends React.Component {
             <div className="form-check">
               <input
               type="checkbox"
-              className="form-check-input"
+              className="form-check-input game-input"
               id="currentlyPlaying"
               checked={currentlyPlaying}
               onChange={this.changeCurrentlyPlaying}
               />
-              <label className="form-check-label" htmlFor="currentlyPlaying">Currently Playing</label>
+              <label className="form-check-label games-label" htmlFor="currentlyPlaying">Currently Playing</label>
             </div>
-          <button className="btn btn-primary" onClick={this.updateGame}>Submit</button>
+          <button className="btn btn-primary game-form-btn" onClick={this.updateGame}>Submit</button>
         </form>
       </div>
     );

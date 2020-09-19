@@ -1,5 +1,6 @@
 import React from 'react';
 import logsData from '../../../helpers/data/logsData';
+import '../logFormStyles/logFormStyles.scss';
 
 class AddLog extends React.Component {
   state = {
@@ -63,7 +64,7 @@ class AddLog extends React.Component {
             <label htmlFor="screenshot">Game Screenshot</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control log-input"
             id="screenshot"
             placeholder="Add a Screenshot"
             value={screenshot}
@@ -74,7 +75,7 @@ class AddLog extends React.Component {
             <label htmlFor="dateOfLog">Date Played</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control log-input"
             id="dateOfLog"
             placeholder="Date Played"
             value={dateOfLog}
@@ -85,14 +86,14 @@ class AddLog extends React.Component {
             <label htmlFor="description">Describe Events</label>
             <input
             type="text"
-            className="form-control"
+            className="form-control log-input"
             id="description"
             placeholder="Describe event"
             value={description}
             onChange={this.changeDescription}
             />
           </div>
-          <button className="btn btn-primary" onClick={this.updateLog}>Submit</button>
+          <button className="btn btn-primary log-form-btn" onClick={this.updateLog}>Submit</button>
         </form>
       </div>
     );

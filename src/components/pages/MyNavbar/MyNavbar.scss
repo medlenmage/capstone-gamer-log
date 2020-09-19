@@ -12,6 +12,10 @@ nav {
   font-size: x-large;
 }
 
+.nav-links:hover {
+  color: $color1 !important;
+}
+
 .game-link {
   margin-right: 25px;
 }
@@ -25,6 +29,11 @@ nav {
   color: $color1;
   font-family: 'Press Start 2P', cursive;
   border: 1px solid $color1;
+}
+
+.sign-out:hover {
+  background-color: $color1;
+  color: $color3;
 }
 
 .app-name {
