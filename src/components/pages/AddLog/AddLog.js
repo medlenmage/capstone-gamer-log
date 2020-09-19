@@ -26,7 +26,7 @@ class AddLog extends React.Component {
   addALog = (e) => {
     e.preventDefault();
     const { screenshot, dateOfLog, description } = this.state;
-
+    console.error(this.props.match.params);
     const newLog = {
       screenshot,
       dateOfLog,
@@ -36,7 +36,9 @@ class AddLog extends React.Component {
 
     logsData.addNewLog(newLog)
       .then(() => {
-        this.props.histoy.push(`/log/${this.props.match.params.gameId}`);
+        // console.error(res.data.log);
+        // console.error(this.props.match.params.gameId);
+        this.props.history.push(`/log/${this.props.match.params.gameId}`);
       })
       .catch((err) => console.error('could not add log', err));
   }

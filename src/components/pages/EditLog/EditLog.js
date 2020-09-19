@@ -7,7 +7,17 @@ class AddLog extends React.Component {
       screenshot: '',
       dateOfLog: '',
       description: '',
+      gameId: '',
     },
+  }
+
+  componentDidMount() {
+    logsData.getLogsById(this.props.match.params.logId)
+      .then((res) => {
+        const log = res.data;
+        this.setState({ log });
+      })
+      .catch((err) => console.error('could not get log', err));
   }
 
   changeScreenshot = (e) => {
@@ -34,13 +44,13 @@ class AddLog extends React.Component {
 
   updateLog = (e) => {
     e.preventDefault();
-    const { logId } = this.props.match.params.logId;
+    const { logId } = this.props.match.params;
 
     logsData.editALog(logId, this.state.log)
-      .then(() => {
-        this.props.history.push(`/log/${this.props.match.gameId}`);
+      .then((res) => {
+        this.props.history.push(`/log/${res.data.gameId}`);
       })
-      .catch((err) => console.error('could not update log'));
+      .catch((err) => console.error('could not update log', err));
   }
 
   render() {
