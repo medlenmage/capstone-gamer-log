@@ -12,10 +12,11 @@ import fbConnection from '../helpers/data/connections';
 import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/pages/MyNavbar/MyNavbar';
 import GameForm from '../components/pages/AddGame/AddGame';
-import LogForm from '../components/pages/AddUpdateLog/AddUpdateLog';
+import LogForm from '../components/pages/AddLog/AddLog';
 import LogsPage from '../components/pages/LogsPage/LogsPage';
 import Homepage from '../components/pages/Homepage/Homepage';
 import EditGame from '../components/pages/EditGame/EditGame';
+import EditLog from '../components/pages/EditLog/EditLog';
 
 fbConnection();
 
@@ -70,7 +71,7 @@ class App extends React.Component {
               <PrivateRoute path="/new-game" component={GameForm} authed={authed} />
               <PrivateRoute path="/edit-game/:gameId" component={EditGame} authed={authed} />
               <PrivateRoute path="/new-log/:gameId" component={LogForm} authed={authed} />
-              <PrivateRoute path="/edit-log/:logId" component={LogForm} authed={authed} />
+              <PrivateRoute path="/edit-log/:logId" component={EditLog} authed={authed} />
               <PublicRoute path="/landing" component={Auth} authed={authed} />
               <Redirect from="*" to="/" />
             </Switch>
