@@ -49,40 +49,40 @@ class AddLog extends React.Component {
     return (
       <div className="add-update">
         <form className="col-6 offset-3">
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="screenshot">Game Screenshot</label>
             <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="screenshot"
             placeholder="Add a Screenshot"
             value={screenshot}
             onChange={this.changeScreenshot}
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="dateOfLog">Date Played</label>
             <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="dateOfLog"
             placeholder="Date Played"
             value={dateOfLog}
             onChange={this.changeDate}
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="description">Describe Events</label>
             <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="description"
             placeholder="Describe event"
             value={description}
             onChange={this.changeDescription}
             />
           </div>
-          <button class="btn btn-primary" onClick={this.addALog}>Submit</button>
+          <button className="btn btn-primary" onClick={this.addALog}>Submit</button>
         </form>
       </div>
     );
