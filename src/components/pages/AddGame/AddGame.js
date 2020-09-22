@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from 'firebase/app';
 import gamesData from '../../../helpers/data/gamesData';
 import authData from '../../../helpers/data/authData';
 import '../gameFormStyles/gameFormStyles.scss';
@@ -33,8 +34,16 @@ class AddGame extends React.Component {
 
   changeGameImage = (e) => {
     e.preventDefault();
-    this.setState({ gameImage: e.target.value });
+    const file = e.target.files[0];
+    if (file) {
+      this.setState({ gameImage: e.target.files[0] });
+    }
   }
+
+  // changeGameImage = (e) => {
+  //   e.preventDefault();
+  //   this.setState({ gameImage: e.target.value });
+  // }
 
   changeCurrentlyPlaying = (e) => {
     this.setState({ currentlyPlaying: e.target.checked });
@@ -50,20 +59,28 @@ class AddGame extends React.Component {
       currentlyPlaying,
     } = this.state;
 
+    const image = gameImage.name;
+    const ref = firebase.storage().ref(`coverart/${image}`);
+
     const newGame = {
       gameName,
       gameGenre,
       dateStarted,
-      gameImage,
+      gameImage: '',
       currentlyPlaying,
       uid: authData.getUid(),
     };
 
-    gamesData.addGame(newGame)
-      .then(() => {
-        this.props.history.push('/');
-      })
-      .catch((err) => console.error('could not add the game', err));
+    ref.put(gameImage).then(() => {
+      ref.getDownloadURL().then((url) => {
+        newGame.gameImage = url;
+        gamesData.addGame(newGame)
+          .then(() => {
+            this.props.history.push('/');
+          })
+          .catch((err) => console.error('could not upload image', err));
+      });
+    });
   }
 
   render() {
@@ -71,7 +88,6 @@ class AddGame extends React.Component {
       gameName,
       gameGenre,
       dateStarted,
-      gameImage,
       currentlyPlaying,
     } = this.state;
 
@@ -116,11 +132,11 @@ class AddGame extends React.Component {
             <div className="form-group">
               <label htmlFor="gameImage" className="games-label">Cover Art</label>
               <input
-              type="text"
+              type="file"
               className="form-control game-input"
               id="gameImage"
               placeholder="Cover Art Here"
-              value={gameImage}
+              // value={gameImage}
               onChange={this.changeGameImage}
               />
             </div>

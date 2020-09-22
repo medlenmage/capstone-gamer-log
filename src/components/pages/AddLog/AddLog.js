@@ -1,4 +1,5 @@
 import React from 'react';
+import firebase from 'firebase/app';
 import logsData from '../../../helpers/data/logsData';
 
 class AddLog extends React.Component {
@@ -10,7 +11,10 @@ class AddLog extends React.Component {
 
   changeScreenshot = (e) => {
     e.preventDefault();
-    this.setState({ screenshot: e.target.value });
+    const file = e.target.files[0];
+    if (file) {
+      this.setState({ screenshot: e.target.files[0] });
+    }
   }
 
   changeDate = (e) => {
@@ -26,7 +30,10 @@ class AddLog extends React.Component {
   addALog = (e) => {
     e.preventDefault();
     const { screenshot, dateOfLog, description } = this.state;
-    console.error(this.props.match.params);
+
+    const image = screenshot.name;
+    const ref = firebase.storage().ref(`Screenshots/${image}`);
+
     const newLog = {
       screenshot,
       dateOfLog,
@@ -34,17 +41,20 @@ class AddLog extends React.Component {
       gameId: this.props.match.params.gameId,
     };
 
-    logsData.addNewLog(newLog)
-      .then(() => {
-        // console.error(res.data.log);
-        // console.error(this.props.match.params.gameId);
-        this.props.history.push(`/log/${this.props.match.params.gameId}`);
-      })
-      .catch((err) => console.error('could not add log', err));
+    ref.put(screenshot).then(() => {
+      ref.getDownloadURL().then((url) => {
+        newLog.screenshot = url;
+        logsData.addNewLog(newLog)
+          .then(() => {
+            this.props.history.push(`/log/${this.props.match.params.gameId}`);
+          })
+          .catch((err) => console.error('could not add log', err));
+      });
+    });
   }
 
   render() {
-    const { screenshot, dateOfLog, description } = this.state;
+    const { dateOfLog, description } = this.state;
 
     return (
       <div className="add-update">
@@ -52,11 +62,10 @@ class AddLog extends React.Component {
           <div className="form-group">
             <label htmlFor="screenshot">Game Screenshot</label>
             <input
-            type="text"
+            type="file"
             className="form-control log-input"
             id="screenshot"
             placeholder="Add a Screenshot"
-            value={screenshot}
             onChange={this.changeScreenshot}
             />
           </div>
