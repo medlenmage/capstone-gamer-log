@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logsData from '../../../helpers/data/logsData';
 import LogCards from '../LogCards/LogCards';
+import './LogsPage.scss';
 
 class LogsPage extends React.Component {
   state = {
@@ -41,7 +42,7 @@ class LogsPage extends React.Component {
 
     return (
       <div className="">
-        <h3>Homepage</h3>
+        <h3 className="logs-header">Game Logs</h3>
         <Link className="btn btn-primary add-log" to={addLog}>New Log</Link>
         <div className="mb-3">
           <div className="card-columns">
