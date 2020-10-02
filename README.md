@@ -32,6 +32,6 @@ Here is the deployed app https://gamer-log.web.app/
 ![screenshot](/screenshots/appScreenshots/gamesPage.png)
 ![screenshot](/screenshots/appScreenshots/landingPage.png)
 ![screenshot](/screenshots/appScreenshots/logsPage.png)
-![screenshot](/screenshots/appScreenshots/newGamePage.png)
-![screenshot](/screenshots/appScreenshots/newLogPage.png)
+![screenshot](/screenshots/appScreenshots/newGame.png)
+![screenshot](/screenshots/appScreenshots/newLog.png)
 
