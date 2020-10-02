@@ -1,6 +1,6 @@
 # Gamer Log
 
-##Description
+## Description
 ---
 This is a project that was made to encapsulate all knowledge learned for frontend web development. It utilizes React, Sass, and javascript.
 
