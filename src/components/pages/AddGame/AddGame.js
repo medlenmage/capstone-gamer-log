@@ -40,11 +40,6 @@ class AddGame extends React.Component {
     }
   }
 
-  // changeGameImage = (e) => {
-  //   e.preventDefault();
-  //   this.setState({ gameImage: e.target.value });
-  // }
-
   changeCurrentlyPlaying = (e) => {
     this.setState({ currentlyPlaying: e.target.checked });
   }
@@ -136,7 +131,6 @@ class AddGame extends React.Component {
               className="form-control game-input"
               id="gameImage"
               placeholder="Cover Art Here"
-              // value={gameImage}
               onChange={this.changeGameImage}
               />
             </div>
